@@ -2,8 +2,8 @@
 
 A voice-based English speaking assistant that gives real-time feedback using mistral-7B AI.
 
-[🔗 Demo Video](https://your-demo-link.com)  
-[📖 Substack Deep Dive](https://your-substack-link.com)  
+[🔗 Demo Video](https://www.youtube.com/watch?v=xmZfHo1p2lw)  
+[📖 Substack Deep Dive](https://projectinsightsbyss.substack.com/p/ai-powered-speech-tutor)  
 [💼 Connect on LinkedIn](https://www.linkedin.com/in/samradhi-sharma-2781a4261/)
 
 ---
