@@ -4,7 +4,7 @@
 
 [![🎥 Demo Video](#)](#) <!-- 🔁 Replace with video link -->
 [![📖 Substack Article](#)](#) <!-- 🔁 Replace with blog article -->
-[![🔗 LinkedIn](#)](#) <!-- 🔁 Replace with your LinkedIn profile -->
+[![🔗 LinkedIn](#)](#) <!-- https://www.linkedin.com/in/samradhi-sharma-2781a4261/ -->
 
 ---
 
