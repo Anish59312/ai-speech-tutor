@@ -1,0 +1,123 @@
+html, body, #root {
+  height: 100%;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-family: 'Segoe UI', 'Helvetica Neue', sans-serif;
+  background: linear-gradient(to right, #e0f7fa, #e3f2fd);
+}
+
+#root {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+/* Main container */
+.app-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  padding: 3rem;
+  width: 90%;
+  max-width: 720px;
+  background-color: #ffffff;
+  border-radius: 16px;
+  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.1);
+}
+
+/* Title */
+.title {
+  font-size: 3.2rem;
+  font-weight: 700;
+  color: #263238;
+  margin-bottom: 1.5rem;
+}
+
+/* Avatar - bigger, fills space, centered */
+.avatar-container {
+  margin-bottom: 1.5rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.avatar-container canvas,
+.avatar-container > div,
+.avatar-container svg {
+  width: 300px !important;
+  height: 300px !important;
+}
+
+/* Toggle */
+.form-switch {
+  font-size: 1.2rem;
+  margin-bottom: 1rem;
+}
+
+/* Button */
+button {
+  font-size: 1.1rem;
+  padding: 12px 28px;
+  margin: 1rem 0;
+  border: none;
+  border-radius: 10px;
+  background-color: #007bff;
+  color: #fff;
+  transition: background-color 0.3s;
+}
+button:hover {
+  background-color: #0056b3;
+}
+button:disabled {
+  background-color: #ccc;
+  cursor: not-allowed;
+}
+
+/* Transcript */
+.transcript-box {
+  margin-top: 1rem;
+  padding: 1.25rem;
+  font-size: 1.2rem;
+  background-color: #f1f8ff;
+  border: 2px solid #cce4f6;
+  border-radius: 12px;
+  max-width: 600px;
+  width: 100%;
+  word-break: break-word;
+  font-weight: 500;
+  color: #212121;
+}
+
+/* Score section */
+.score-container {
+  margin-top: 1.5rem;
+  font-size: 1.05rem;
+  color: #37474f;
+}
+.score-container p {
+  margin: 0.5rem 0;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+.score-container p::before {
+  content: '✨';
+  font-size: 1.2rem;
+}
+.score-container p:nth-child(1)::before {
+  content: '🗯️';
+}
+.score-container p:nth-child(2)::before {
+  content: '📈';
+}
+.score-container p:nth-child(3)::before {
+  content: '💬';
+}
