@@ -1,6 +1,6 @@
-# 🎙️ AI Voice Tutor
+# 🎙️ AI Speech Tutor
 
-> A voice-based English speaking assistant that gives real-time feedback using mistral-7B AI.
+A voice-based English speaking assistant that gives real-time feedback using mistral-7B AI.
 
 [🔗 Demo Video](https://your-demo-link.com)  
 [📖 Substack Deep Dive](https://your-substack-link.com)  
@@ -23,7 +23,7 @@ It provides:
 ## 📸 Preview
 
 <!-- Replace with actual image path -->
-![App Screenshot](https://drive.google.com/file/d/1AZsqSEeldUeyCUV7muNpye4IORNVDyMz/view?usp=sharing)
+![Screenshot](https://github.com/user-attachments/assets/55d2ff29-ad92-4997-a713-1e3ea84a45b7)
 
 ---
 
