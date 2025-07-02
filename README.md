@@ -2,9 +2,9 @@
 
 > A voice-based English speaking assistant that gives real-time feedback using mistral-7B AI.
 
-[![🎥 Demo Video](#)](#) <!-- 🔁 Replace with video link -->
-[![📖 Substack Article](#)](#) <!-- 🔁 Replace with blog article -->
-[![🔗 LinkedIn](#)](#) <!-- https://www.linkedin.com/in/samradhi-sharma-2781a4261/ -->
+[🔗 Demo Video](https://your-demo-link.com)  
+[📖 Substack Deep Dive](https://your-substack-link.com)  
+[💼 Connect on LinkedIn](https://www.linkedin.com/in/samradhi-sharma-2781a4261/)
 
 ---
 
@@ -23,7 +23,7 @@ It provides:
 ## 📸 Preview
 
 <!-- Replace with actual image path -->
-![App Screenshot](#)
+![App Screenshot](https://drive.google.com/file/d/1AZsqSEeldUeyCUV7muNpye4IORNVDyMz/view?usp=sharing)
 
 ---
 
@@ -99,3 +99,6 @@ node server.js
 # 6. In a new terminal, start frontend
 cd ..
 npm run dev
+```
+
+🤝 Got feedback or want to contribute? Open an issue, send a PR, or connect with me directly — always open to ideas and collaboration!
