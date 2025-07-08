@@ -3,15 +3,19 @@ import Avatar from './components/Avatar';
 import Toggle from './components/Toggle';
 import TranscriptBox from './components/TranscriptBox';
 import SpeechControls from './components/SpeechControls';
-import { speakText, startSpeechRecognition } from './utils/speechUtils';
+import { speakText, startSpeechRecognition, stopSpeaking } from './utils/speechUtils';
 import axios from 'axios';
 import './App.css';
+import Lottie from 'react-lottie-player';
+import loadingAnimation from './assets/loading-animation.json'
+
 
 function App() {
   const [isListening, setListening] = useState(false);
   const [transcript, setTranscript] = useState('');
   const [isSpeaking, setSpeaking] = useState(false);
   const [interviewMode, setInterviewMode] = useState(false);
+  const [loading, setLoading] = useState(false);
 
   const [fillerScore, setFillerScore] = useState(null);
   const [wpm, setWPM] = useState(null);
@@ -38,17 +42,22 @@ function App() {
 
   const handleStop = () => {
     window.speechRecognition?.stop();
+    stopSpeaking(); // Also stop any ongoing speech
     setListening(false);
+    setSpeaking(false); // Reset speaking state
   };
 
   const getGPTFeedback = async (text) => {
     try {
       setSpeaking(true);
+      setLoading(true);
       const res = await axios.post('http://localhost:5000/gpt-feedback', {
         input: text,
         interviewMode,
       });
+      setLoading(false);
       const feedback = res.data.reply;
+      console.log("feedback", feedback)
       speakText(feedback, () => {
         setSpeaking(false); // ❗ Only stop when GPT finishes speaking
       });
@@ -62,7 +71,7 @@ function App() {
     const words = text.trim().split(/\s+/);
     const wordCount = words.length;
     const durationSeconds = 6; // estimate (or customize if using timer)
-    
+
     // Filler word count
     const fillerCount = words.filter((w) =>
       fillerWords.includes(w.toLowerCase())
@@ -86,6 +95,17 @@ function App() {
     <div className="app-container">
       <h1 className="title">AI Speech Tutor</h1>
       <Avatar speaking={isSpeaking} />
+      <div className='loading'>
+        {loading && (
+          <Lottie
+            loop={true}
+            speed={1}
+            play={true}
+            animationData={loadingAnimation}
+            style={{ width: 240 }}
+          />
+        )}
+      </div>
       <Toggle
         isInterviewMode={interviewMode}
         toggleInterview={() => setInterviewMode(!interviewMode)}
@@ -96,7 +116,7 @@ function App() {
         onStop={handleStop}
       />
       <TranscriptBox text={transcript} />
-      
+
       {transcript && (
         <div className="score-container">
           <p>Filler Word Score: {fillerScore}%</p>
